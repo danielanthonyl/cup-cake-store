@@ -1,5 +1,5 @@
 import {Review} from '../../interfaces/interfaces';
-import {REVIEW_TYPES} from '../reviewTypes';
+import {REVIEW_TYPES} from '../types/reviewTypes';
 
 export interface ReviewsReducer {
   reviews: Review[];

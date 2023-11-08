@@ -1,5 +1,5 @@
 import {User} from '../../interfaces/interfaces';
-import {USER_TYPES} from '../userTypes';
+import {USER_TYPES} from '../types/userTypes';
 
 export interface UsersReducer {
   Users: User[];

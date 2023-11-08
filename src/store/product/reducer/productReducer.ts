@@ -1,5 +1,5 @@
 import {Product} from '../../interfaces/interfaces';
-import {PRODUCT_TYPES} from '../ProductTypes';
+import {PRODUCT_TYPES} from '../types/ProductTypes';
 
 export interface ProductsReducer {
   products: Product[];
