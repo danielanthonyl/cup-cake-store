@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "image": "https://firebasestorage.googleapis.com/v0/b/cup-cake-store.appspot.com/o/o2u378pa5ejkc0hpk45sie0usc-9aaa3eb6c5746441a9eb5192cc595405%201.png?alt=media&token=e21f02fa-de1e-41ca-a7cc-4175992923b4&_gl=1*6bp7v8*_ga*MTU0OTUwNjk2MS4xNjkyNDgxNDc0*_ga_CW55HF8NVT*MTY5ODI2NjY2Ni40NC4xLjE2OTgyNjY3NjQuMjYuMC4w",
+    "title": "Classic Chocolate Cupcake",
+    "ingredients": "Chocolate cake, chocolate chips, milk chocolate filling",
+    "description": "Indulge in the rich and velvety goodness of our Classic Chocolate Cupcake. Made with a moist chocolate cake base, loaded with chocolate chips, and filled with creamy milk chocolate. Perfect for chocolate lovers!",
+    "price": 3.99,
+    "totalPrice": 24.43,
+    "quantity": 6
+  },
+  {
+    "id": 2,
+    "image": "https://firebasestorage.googleapis.com/v0/b/cup-cake-store.appspot.com/o/o2u378pa5ejkc0hpk45sie0usc-9aaa3eb6c5746441a9eb5192cc595405%201.png?alt=media&token=e21f02fa-de1e-41ca-a7cc-4175992923b4&_gl=1*6bp7v8*_ga*MTU0OTUwNjk2MS4xNjkyNDgxNDc0*_ga_CW55HF8NVT*MTY5ODI2NjY2Ni40NC4xLjE2OTgyNjY3NjQuMjYuMC4w",
+    "title": "Triple Chocolate Temptation",
+    "ingredients": "Triple chocolate cake, dark chocolate ganache, chocolate shavings",
+    "description": "Satisfy your chocolate cravings with our Triple Chocolate Temptation Cupcake. This exquisite treat features a triple chocolate cake, a decadent dark chocolate ganache center, and is elegantly garnished with chocolate shavings.",
+    "price": 5.99,
+    "totalPrice": 24.43,
+    "quantity": 6
+  },
+  {
+    "id": 3,
+    "image": "https://firebasestorage.googleapis.com/v0/b/cup-cake-store.appspot.com/o/o2u378pa5ejkc0hpk45sie0usc-9aaa3eb6c5746441a9eb5192cc595405%201.png?alt=media&token=e21f02fa-de1e-41ca-a7cc-4175992923b4&_gl=1*6bp7v8*_ga*MTU0OTUwNjk2MS4xNjkyNDgxNDc0*_ga_CW55HF8NVT*MTY5ODI2NjY2Ni40NC4xLjE2OTgyNjY3NjQuMjYuMC4w",
+    "title": "Red Velvet Dream Cupcake",
+    "ingredients": "Red velvet cake, cream cheese frosting, red velvet crumbles",
+    "description": "Experience the magic of our Red Velvet Dream Cupcake. Our red velvet cake is paired with a luscious cream cheese frosting and garnished with red velvet crumbles, creating a delightful and velvety treat.",
+    "price": 4.49,
+    "totalPrice": 24.43,
+    "quantity": 6
+  },
+  {
+    "id": 4,
+    "image": "https://firebasestorage.googleapis.com/v0/b/cup-cake-store.appspot.com/o/o2u378pa5ejkc0hpk45sie0usc-9aaa3eb6c5746441a9eb5192cc595405%201.png?alt=media&token=e21f02fa-de1e-41ca-a7cc-4175992923b4&_gl=1*6bp7v8*_ga*MTU0OTUwNjk2MS4xNjkyNDgxNDc0*_ga_CW55HF8NVT*MTY5ODI2NjY2Ni40NC4xLjE2OTgyNjY3NjQuMjYuMC4w",
+    "title": "Lemon Sunshine Cupcake",
+    "ingredients": "Lemon cake, lemon zest, lemon glaze",
+    "description": "Brighten your day with our Lemon Sunshine Cupcake. It features a zesty lemon cake, a sprinkle of lemon zest, and a drizzle of tangy lemon glaze for a refreshing citrus burst in every bite.",
+    "price": 3.99,
+    "totalPrice": 24.43,
+    "quantity": 6
+  },
+  {
+    "id": 5,
+    "image": "https://firebasestorage.googleapis.com/v0/b/cup-cake-store.appspot.com/o/o2u378pa5ejkc0hpk45sie0usc-9aaa3eb6c5746441a9eb5192cc595405%201.png?alt=media&token=e21f02fa-de1e-41ca-a7cc-4175992923b4&_gl=1*6bp7v8*_ga*MTU0OTUwNjk2MS4xNjkyNDgxNDc0*_ga_CW55HF8NVT*MTY5ODI2NjY2Ni40NC4xLjE2OTgyNjY3NjQuMjYuMC4w",
+    "title": "Vanilla Bean Delight Cupcake",
+    "ingredients": "Vanilla cake, Madagascar vanilla bean frosting, vanilla bean specks",
+    "description": "Delight in the simplicity of our Vanilla Bean Delight Cupcake. It features a moist vanilla cake, topped with Madagascar vanilla bean frosting and is beautifully adorned with real vanilla bean specks for a classic and elegant flavor.",
+    "price": 4.99,
+    "totalPrice": 24.43,
+    "quantity": 6
+  },
+  {
+    "id": 6,
+    "image": "https://firebasestorage.googleapis.com/v0/b/cup-cake-store.appspot.com/o/o2u378pa5ejkc0hpk45sie0usc-9aaa3eb6c5746441a9eb5192cc595405%201.png?alt=media&token=e21f02fa-de1e-41ca-a7cc-4175992923b4&_gl=1*6bp7v8*_ga*MTU0OTUwNjk2MS4xNjkyNDgxNDc0*_ga_CW55HF8NVT*MTY5ODI2NjY2Ni40NC4xLjE2OTgyNjY3NjQuMjYuMC4w",
+    "title": "Strawberry Bliss Cupcake",
+    "ingredients": "Strawberry-infused cake, fresh strawberry filling, strawberry cream frosting",
+    "description": "Indulge in the fruity goodness of our Strawberry Bliss Cupcake. Our strawberry-infused cake is filled with fresh, juicy strawberries and topped with a luscious strawberry cream frosting. It's a delightful treat for strawberry lovers.",
+    "price": 4.79,
+    "totalPrice": 24.43,
+    "quantity": 6
+  }
+]
