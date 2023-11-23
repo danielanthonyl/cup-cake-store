@@ -7,6 +7,8 @@ export enum HOME_STACK {
   PRODUCT_DETAILS = 'PRODUCT_DETAILS_VIEW',
 }
 
+export type HomeTypes = ReturnType<() => HOME_STACK>;
+
 const Stack = createStackNavigator();
 export const HomeStackNavigator = () => (
   <Stack.Navigator screenOptions={{headerShown: false}}>

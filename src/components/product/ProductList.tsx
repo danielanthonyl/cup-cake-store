@@ -1,13 +1,25 @@
 import {View, StyleSheet, TouchableOpacity, ScrollView} from 'react-native';
 import Text from '../texts/Text';
-import productList from '../../mocks/productList.json';
 import {Product} from './Product';
+import {useDispatch, useSelector} from 'react-redux';
+import {RootState} from '../../store/store';
+import {useEffect} from 'react';
+import {fetchProductList} from '../../store/product/reducer/productReducer';
 
 export type ProductListProps = {
   title: string;
 };
 
 export const ProductList = ({title}: Partial<ProductListProps>) => {
+  const productList = useSelector((store: RootState) => {
+    return store.productsReducer.products;
+  });
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchProductList() as any);
+  }, [dispatch]);
+
   const isProductListEmpty = productList.length <= 0;
 
   if (isProductListEmpty) {
@@ -29,8 +41,8 @@ export const ProductList = ({title}: Partial<ProductListProps>) => {
         horizontal
         showsHorizontalScrollIndicator={false}
         contentContainerStyle={styles.productListContainer}>
-        {productList.map(({id, ...rest}) => (
-          <Product key={id} {...rest} />
+        {productList.map(product => (
+          <Product key={product.id} {...product} />
         ))}
       </ScrollView>
     </View>

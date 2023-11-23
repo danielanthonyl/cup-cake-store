@@ -4,8 +4,12 @@ import {toBRLCurrency} from '../../../helpers/toBRLCurrency';
 import {ReviewsCard} from '../ReviewsCard';
 import {ProductList} from '../../../components/product/ProductList';
 import {Counter} from './Counter';
+import {store} from '../../../store/store';
+import {addCartProduct} from '../../../store/cart/reducer/cartReducer';
+import {selectProductById} from '../../../store/product/action/selectProductById';
 
 export type ModalProps = {
+  id: string;
   title: string;
   price: number;
   description: string;
@@ -16,6 +20,10 @@ export const Modal = ({title, price, description}: Partial<ModalProps>) => {
   const getQuantity = (quantity: number) => {
     // retrieve quantity value
   };
+
+  //const handlerAddCart = () => {
+  // store.dispatch(addCartProduct(selectProductById(id)));
+  //};
 
   return (
     <View style={styles.container}>

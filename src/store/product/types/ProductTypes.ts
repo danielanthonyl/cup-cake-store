@@ -1,0 +1,3 @@
+export enum PRODUCT_TYPES {
+  FETCH_PRODUCTS = 'FETCH_PRODUCTS',
+}

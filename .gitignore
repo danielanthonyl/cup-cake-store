@@ -2,6 +2,10 @@
 #
 .DS_Store
 
+# DATABASE
+#
+firebase.json
+
 # Xcode
 #
 build/

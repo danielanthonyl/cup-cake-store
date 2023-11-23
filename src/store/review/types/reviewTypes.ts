@@ -1,0 +1,3 @@
+export enum REVIEW_TYPES {
+  FETCH_REVIEWS = 'FETCH_REVIEWS',
+}

@@ -7,6 +7,7 @@ import {useNavigation} from '@react-navigation/native';
 import {HOME_STACK} from '../../navigation/HomeStackNavigator/HomeStackNavigator';
 
 export type ProductProps = {
+  id: string;
   title: string;
   ingredients: string;
   price: number;
@@ -14,6 +15,7 @@ export type ProductProps = {
 };
 
 export const Product = ({
+  id,
   ingredients,
   image,
   price,
@@ -22,7 +24,8 @@ export const Product = ({
   const {navigate} = useNavigation();
 
   const onProductPress = () => {
-    navigate(HOME_STACK.PRODUCT_DETAILS as never);
+    //@ts-ignore
+    navigate(HOME_STACK.PRODUCT_DETAILS, {id});
   };
 
   return (

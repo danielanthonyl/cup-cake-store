@@ -1,17 +1,35 @@
 import {View, StyleSheet} from 'react-native';
 import {Header} from './Header';
-import productList from '../../mocks/productList.json';
 import {Modal} from './modal/Modal';
+import {useRoute} from '@react-navigation/native';
+import {selectProductById} from '../../store/product/action/selectProductById';
+import {store} from '../../store/store';
+import Text from '../../components/texts/Text';
+
+interface ProductDetaisParams {
+  id: string;
+}
 
 export const ProductDetails = () => {
-  const product = productList[0];
+  const route = useRoute();
+  const {id} = route.params as ProductDetaisParams;
+
+  const {productsReducer} = store.getState();
+  const product = selectProductById({state: productsReducer, id});
+
+  if (!product) {
+    return (
+      <View>
+        <Text>ops! something go wrong</Text>
+      </View>
+    );
+  }
 
   return (
     <View style={styles.container0}>
       <View style={styles.container}>
         <Header image={product.image} />
       </View>
-
       <Modal {...product} />
     </View>
   );
