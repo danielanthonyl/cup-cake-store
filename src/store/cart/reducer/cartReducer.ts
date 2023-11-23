@@ -1,5 +1,5 @@
 import {CartProduct} from '../../interfaces/interfaces';
-import {createSlice} from '@reduxjs/toolkit';
+import {PayloadAction, createSlice} from '@reduxjs/toolkit';
 
 export interface CartReducer {
   cartproducts: CartProduct[];
@@ -19,17 +19,25 @@ const cartSlice = createSlice({
   name: 'cartproducts',
   initialState,
   reducers: {
-    addCartProduct: (state, action) => {
+    addCartProduct: (
+      state,
+      {
+        payload: {price, ...cartProduct},
+      }: PayloadAction<Omit<CartProduct, 'totalPrice'> & {price: number}>,
+    ) => {
       const existingProduct = state.cartproducts.find(
-        product => product.id === action.payload.id,
+        product => product.id === cartProduct.id,
       );
 
       if (!existingProduct) {
-        state.cartproducts.push(action.payload);
+        state.cartproducts.push({
+          ...cartProduct,
+          totalPrice: Number((price * cartProduct.quantity).toFixed(2)),
+        });
       } else {
         state.cartproducts = updateProduct({
           state,
-          cartProduct: action.payload,
+          cartProduct: {price, ...cartProduct},
         });
       }
     },
@@ -41,15 +49,20 @@ const updateProduct = ({
   cartProduct,
 }: {
   state: CartReducer;
-  cartProduct: CartProduct;
+  cartProduct: Omit<CartProduct, 'totalPrice'> & {price: number};
 }) => {
-  return state.cartproducts.map(product => {
-    if (product.id === cartProduct.id) {
-      return (product = cartProduct);
-    } else {
-      return product;
-    }
-  });
+  const updatedProduct = [...state.cartproducts];
+  const productToUpdateIndex = state.cartproducts.findIndex(
+    product => product.id === cartProduct.id,
+  );
+  const newTotalPrice = Number(
+    (cartProduct.price * cartProduct.quantity).toFixed(2),
+  );
+
+  updatedProduct[productToUpdateIndex].quantity = cartProduct.quantity;
+  updatedProduct[productToUpdateIndex].totalPrice = newTotalPrice;
+
+  return updatedProduct;
 };
 
 export const {addCartProduct} = cartSlice.actions;

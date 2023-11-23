@@ -33,7 +33,7 @@ export const Cart = () => {
   }
 
   return (
-    <ScrollView>
+    <ScrollView contentContainerStyle={{flex: 1}}>
       <View style={styles.container}>
         <Header />
 
@@ -60,7 +60,7 @@ export const Cart = () => {
 const styles = StyleSheet.create({
   checkout: {
     alignSelf: 'center',
-    marginTop: 40,
+    marginTop: 'auto',
     alignItems: 'center',
     justifyContent: 'center',
     height: 60,

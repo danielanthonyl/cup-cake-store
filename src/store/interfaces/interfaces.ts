@@ -14,10 +14,10 @@ export interface Product {
   review: Review[];
 }
 
-export interface CartProduct extends Product {
-  id: string;
+export interface CartProduct
+  extends Pick<Product, 'id' | 'ingredients' | 'name'> {
   quantity: number;
-  totalPrice: string;
+  totalPrice: number;
 }
 
 export interface Review {

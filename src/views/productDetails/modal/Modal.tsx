@@ -6,24 +6,42 @@ import {ProductList} from '../../../components/product/ProductList';
 import {Counter} from './Counter';
 import {store} from '../../../store/store';
 import {addCartProduct} from '../../../store/cart/reducer/cartReducer';
-import {selectProductById} from '../../../store/product/action/selectProductById';
+import {useState} from 'react';
 
 export type ModalProps = {
   id: string;
   title: string;
   price: number;
   description: string;
+  ingredients: string;
+  name: string;
 };
 
-export const Modal = ({title, price, description}: Partial<ModalProps>) => {
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const getQuantity = (quantity: number) => {
-    // retrieve quantity value
+export const Modal = ({
+  id,
+  title,
+  price,
+  description,
+  ingredients,
+  name,
+}: Partial<ModalProps>) => {
+  const [quantity, setQuantity] = useState(1);
+
+  const getQuantity = (value: number) => {
+    setQuantity(value);
   };
 
-  //const handlerAddCart = () => {
-  // store.dispatch(addCartProduct(selectProductById(id)));
-  //};
+  const addCartHandler = () => {
+    store.dispatch(
+      addCartProduct({
+        id: id!,
+        price: price!,
+        ingredients: ingredients!,
+        quantity,
+        name: name!,
+      }),
+    );
+  };
 
   return (
     <View style={styles.container}>
@@ -49,7 +67,9 @@ export const Modal = ({title, price, description}: Partial<ModalProps>) => {
         <Text style={styles.relatedItemsTitle}>Items relacionados</Text>
         <ProductList />
 
-        <TouchableOpacity style={styles.addToCartButton}>
+        <TouchableOpacity
+          onPress={addCartHandler}
+          style={styles.addToCartButton}>
           <Text style={styles.addToCartTitle}>Adicionar ao Carrinho</Text>
         </TouchableOpacity>
       </ScrollView>

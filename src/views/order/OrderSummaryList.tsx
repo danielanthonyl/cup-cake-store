@@ -1,31 +1,34 @@
 import {View, StyleSheet} from 'react-native';
-import productListMock from '../../mocks/productList.json';
 import Text from '../../components/texts/Text';
 import {toBRLCurrency} from '../../helpers/toBRLCurrency';
+import {useSelector} from 'react-redux';
+import {RootState} from '../../store/store';
 
 export const CartSummaryList = () => {
+  const {cartproducts} = useSelector((store: RootState) => {
+    return store.cartReducer;
+  });
+
   return (
     <View>
       <Text style={styles.header}>Detalhes do pedido</Text>
 
       <View style={styles.container}>
         {/* cart reduce goes here */}
-        {productListMock.map(
-          ({id, quantity, totalPrice, ingredients, title}) => (
-            <View key={id} style={styles.cardItem}>
-              <Text style={styles.quantity}>{quantity}x</Text>
+        {cartproducts.map(({id, quantity, totalPrice, ingredients, name}) => (
+          <View key={id} style={styles.cardItem}>
+            <Text style={styles.quantity}>{quantity}x</Text>
 
-              <View style={styles.titleContainer}>
-                <Text style={styles.title}>{title}</Text>
-                <Text style={styles.ingredients} numberOfLines={1}>
-                  {ingredients}
-                </Text>
-              </View>
-
-              <Text style={styles.price}>{toBRLCurrency(totalPrice)}</Text>
+            <View style={styles.titleContainer}>
+              <Text style={styles.title}>{name}</Text>
+              <Text style={styles.ingredients} numberOfLines={1}>
+                {ingredients}
+              </Text>
             </View>
-          ),
-        )}
+
+            <Text style={styles.price}>{toBRLCurrency(totalPrice)}</Text>
+          </View>
+        ))}
       </View>
     </View>
   );
